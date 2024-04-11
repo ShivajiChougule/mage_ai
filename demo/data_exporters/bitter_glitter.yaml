@@ -1,0 +1,12 @@
+connector_type: postgres
+database: public
+host: 127.0.0.1
+password: pass
+port: 5432
+schema: public
+username: postgres
+table: employeedata
+
+
+
+

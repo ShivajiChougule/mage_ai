@@ -1,0 +1,70 @@
+blocks:
+- all_upstream_blocks_executed: true
+  color: null
+  configuration: {}
+  downstream_blocks:
+  - dry_smoke
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: yaml
+  name: restless frost
+  retry_config: null
+  status: updated
+  timeout: null
+  type: data_loader
+  upstream_blocks: []
+  uuid: restless_frost
+- all_upstream_blocks_executed: false
+  color: null
+  configuration: {}
+  downstream_blocks:
+  - bitter_glitter
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: dry smoke
+  retry_config: null
+  status: updated
+  timeout: null
+  type: transformer
+  upstream_blocks:
+  - restless_frost
+  uuid: dry_smoke
+- all_upstream_blocks_executed: false
+  color: null
+  configuration: {}
+  downstream_blocks: []
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: yaml
+  name: bitter glitter
+  retry_config: null
+  status: updated
+  timeout: null
+  type: data_exporter
+  upstream_blocks:
+  - dry_smoke
+  uuid: bitter_glitter
+callbacks: []
+concurrency_config: {}
+conditionals: []
+created_at: '2023-09-12 05:47:27.954905+00:00'
+data_integration: null
+description: null
+executor_config: {}
+executor_count: 1
+executor_type: null
+extensions: {}
+name: Kafka Streaming Pipeline
+notification_config: {}
+retry_config: {}
+run_pipeline_in_one_process: false
+spark_config: {}
+tags: []
+type: streaming
+updated_at: '2023-09-12 09:26:15'
+uuid: kafka_streaming_pipeline
+widgets: []
